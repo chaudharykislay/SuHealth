@@ -1,0 +1,61 @@
+body{
+    background-image: url(pramod-tiwari-w09m4VYrAK4-unsplash.jpg);
+    background-repeat: no-repeat;  
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 385px;
+    height: 580px;
+    border-radius: 0px;
+    background-color: azure;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    margin-top: 100px;
+    margin-left: 580px;
+    text-align: center;
+}
+.container h1{
+  text-decoration: underline;
+}
+.container img{
+   width: 385px;
+   height: 234px;  
+}
+.container input{
+  width: 200px;
+  height: 25px;
+  padding:6px 6px ;
+  border-radius: 3px;
+  outline: none;
+  font-size: large;
+  border-color: wheat;
+}
+.container strong{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+
+}
+.container button{
+  width: 320px;
+  height: 40px;
+  font-size: 150%;
+  font-weight: bold;
+  background-color: blue;
+  color: white;
+  border-radius: 4px;
+  border-color: blue;
+  cursor: pointer;
+  margin-top: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.co span{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+}
+
+  
+

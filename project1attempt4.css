@@ -1,0 +1,105 @@
+body{
+    margin: 0;
+    background-image: url('photo22.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    position: sticky;
+    top: 0px;
+    justify-content: space-between;
+    padding: 20px 10px;
+    color: aliceblue;
+    width: 1500px;
+}
+nav a{
+    margin: 7px;
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.982);
+    font-weight: bold;
+}
+.login{
+    background-color: rgb(49, 144, 146);
+    /* padding: 0; */
+    top: 0;
+    /* margin: 20px 20px; */
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 20px;
+    display: inline-block;
+    color: aliceblue;
+    /* align-items: center;  */
+    /* align-content: center;  */
+}
+a:link,a:visited {
+        color: #050707;
+    }
+a:hover{
+        color: #d6a62c;
+        background-color: dimgrey;
+        border-radius: 40px;
+    }
+a:color:active{
+        color: #1e6f46;
+    }
+.gallery{
+    display: block;
+    top: 30px;
+    margin: 0px 0px;
+    padding: 20px 20px;
+}
+.p1{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr;
+    font-style: italic;
+    color: rgb(2, 2, 80);
+    padding: 80px 0px;
+     /* margin: 80px 0px; */
+} 
+.p2{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr;
+    font-style: italic;
+    color: rgb(2, 2, 80);
+    padding: 0px 60px;
+}
+.p3{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr;
+    font-style: italic;
+    color: rgb(2, 2, 80);
+    padding: 30px 60px;
+}
+.p4{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr;
+    font-style: italic;
+    color: rgb(2, 2, 80);
+    padding: 20px 60px;
+}
+.i1{
+    margin: 0px 40px;
+    border-radius: 40px;
+}
+@media (max-width: 500px){
+    body {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #222;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+}}

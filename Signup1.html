@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+    <script>
+        function validate(form) {
+            if ((form1.ft.value == "")||(form1.lt.value=="")) {
+                alert("Enter your Full Name");
+                return false;
+            }
+            if(form.d1.value == 0){
+                alert("Enter your Date of Birth");
+                return false;
+            }
+            var g1 = form1.gen[0].checked;
+            var g2 = form1.gen[1].checked;
+            if((g1 == "0") && (g2 == "0")){
+                alert("Enter your Gender");
+                return false;
+            }
+            if (form1.add1.value == "") {
+                alert("Enter your Address");
+                return false;
+            }
+            if (form1.add2.value == "") {
+                alert("Enter your Address");
+                return false;
+            }
+            if (form1.c1.value == "") {
+                alert("Enter your city");
+                return false;
+            }
+            if (form1.s1.value == "") {
+                alert("Enter your State");
+                return false;
+            }
+            var p1 = form1.pin.value
+            if (p1 == "") {
+                alert("Enter your Pincode");
+                return false
+            }
+            if (p1.length != "6") {
+                alert("Enter Correct Pincode");
+                return false;
+            }
+            if (form1.Country.value == "") {
+                alert("Enter your Country");
+                return false;
+            }
+            var p = form1.phone.value;
+            if (p == "") {
+                alert("Enter your Mobile Number");
+                return false;
+            }
+            if(p.length != 10) {
+                alert("Enter your Correct mobile number")
+                return false;
+            }
+            if(form1.email.value==""){
+                alert("Enter your E-mail")
+            }
+            if((form1.pfn.value=="")||(form1.pln.value=="")){
+                alert("Enter your Parent Full Name")
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <section class="Health">
+        <h1>Student Entry Health form</h1>
+        <form name="form1" method="post" action="index.html">
+            <div>
+                <p>Name</p>
+                <input type="text" name="ft" placeholder="First">
+                <input type="text" name="lt" placeholder="Last">
+            </div>
+            <div>
+                <p>Birth Date</p>
+                <input type="date" name="d1" placeholder="MM/DD/YYYY">
+            </div>
+            <div class="Gender">
+                <p>Gender</p>
+                <input type="radio" name="gen">Male
+                <span><input type="radio" name="gen">Female<span>
+            </div>
+            <div>
+                <p>Address</p>
+                <input type="text" name="add1" placeholder="Address Line 1">
+                <input type="text" name="add2" placeholder="Address Line 2">
+                <input type="text" name="c1" placeholder="City">
+                <input type="text" name="s1" placeholder="State">
+                <input type="text" name="pin" placeholder="Postal/Zip Code">
+                <input type="text" name="Country" placeholder="Country">
+            </div>
+            <div>
+                <pre style="font-size: 20px;">Mobile number                        E-mail</pre>
+                <input type="number" name="phone" placeholder="### ### ####">
+                <input type="email" name="email" placeholder="">
+            </div>
+            <div>
+                <p>Parent/Guardian</p>
+                <input type="text" name="pfn" placeholder="First">
+                <input type="text" name="pln" placeholder="Last">
+            </div>
+            <div class="submit">
+               <input type="submit" value="Next" onclick="return validate(this.form)">
+            </div>
+        </form>
+    </section>
+</body>
+
+</html>

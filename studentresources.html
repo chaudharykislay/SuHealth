@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuHealth Resources</title>
+    <link rel="stylesheet" href="studentresources.css">
+    <script>
+    function validate(form) {
+        if (form.s1.value == "") {
+            alert("Please select a Resource Name.");
+            form.s1.focus();
+            return false;
+        }
+        if (form.s2.value == "") {
+            alert("Please select a Resource Type.");
+            form.s2.focus();
+            return false;
+        }
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <p><img src="photo14.png" alt="SuHealth Logo" class="logo">
+             <h1><center>SuHealth Student Resources</center></h1></p>
+             <div id="r5"></div>
+    </header>
+    <section class="r1">
+       <a href="studentresources.html"><h2>Manage Resources</h2></a>
+    </section>
+    
+        <form action="studentresources.html" method="post">
+        <section class="r2">
+        <div >
+          <div class="re1">Resource Name</div>
+          <div class="re3"><select name="s1" id="s1" >
+            <option value="counseling" >Counseling Services</option>
+            <option value="nutrition">Nutrition</option>
+            <option value="fitness" >Fitness</option>
+            <option value="mentalhealth" >Mental Health Support</option>
+            <option value="program" >Programs</option>
+          </select> </div>
+       </div>
+       <div >
+            <div class="re1">Resources Type</div>
+            <div class="re3"><select name="s2" id="s2">
+             <option value="counseling">Support</option>
+            <option value="nutrition">Nutrition</option>
+            <option value="fitness">Campus Fitness Programs</option>
+            <option value="mentalhealth">Mental Health Support</option>
+            <option value="workshops">Health Workshops and Seminars</option>   
+            </select> </div>
+       </div>
+       <div>
+            <div class="re1">status</div>
+            <div class="re3" >Activate</div>
+       </div>
+       <div>
+         <div class="re1"><input type="submit" name="submit" class="re8" value="Add" onsubmit="addResource('addResource',resource)"></div>
+       </div> </section>   
+        </form>
+        <section class="r3">
+            <h1>Resources Added</h1>
+        </section>
+        <section class="r2">
+            <div >
+            <div class="re1">Resource Name</div>
+            <div id="re4"></div>
+            </div>
+            <div>
+            <div class="re1">Resource Type</div>
+            <div id="re5"></div>
+            </div>
+            <div>
+            <div class="re1">Status</div>
+            <div id="re6"></div>
+            </div>
+            <div>
+            <div class="re1">Action</div>
+            <div id="re7"></div>
+            </div>
+        </section>
+        
+   <script src="javascript1.js"></script>
+</body>
+</html>
