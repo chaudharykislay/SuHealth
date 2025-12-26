@@ -1,6 +1,7 @@
 let resources = JSON.parse(localStorage.getItem("resources")) || [];
 
 document.querySelector("form").addEventListener("submit", function(event) {
+    event.preventDefault();
     let s1value = document.getElementById("s1").value;
     let s2value = document.getElementById("s2").value;
     
@@ -30,6 +31,7 @@ document.querySelector("form").addEventListener("submit", function(event) {
        link: link
     };
     resources.push(resource);
+    showResources();
     localStorage.setItem("resources", JSON.stringify(resources));
     alert(s1value+s2value + " added to your resources!");
 });
