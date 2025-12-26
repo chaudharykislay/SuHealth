@@ -6,18 +6,13 @@ document.querySelector("form").addEventListener("submit", function(event) {
     
     let link ;
     if(s1value=="Nutrition🥗"){
-        link="Nutition1.html"
+        link="adminnutrition.html"
     }
     else if(s1value=="Fitness💪🏼"){
-        link="FITNESS.html"
+        link="adminfitnessupdate.html"
     }
     else if(s1value=="Mentalhealth🧠"){
-         if(s1value=="Mentalhealth🧠" && s2value=="Mentalhealthform"){
-        link="form.html";
-    }else{
-        link="studentmentalhealth.html"
-    }
-    
+        link="mentalhealthadmin.html"
     }
     else{
         link ;
@@ -57,7 +52,7 @@ function showResources() {
     if (!box4) return;
     box4.innerHTML = "";    
     resources.forEach((name, index) => {
-        box4.innerHTML += `<p> <button onclick="removeResource(${index})">Remove❌</button> <button onclick="goToPage('${name.link}')">Access🔧</button> </p>`;
+        box4.innerHTML += `<p> <button onclick="removeResource(${index})">Remove❌</button> <button onclick="goToPage('${name.link}')">Update🔧</button> </p>`;
     });
 }
     function removeResource(index){

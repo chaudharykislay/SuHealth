@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin – Nutrition Control</title>
+<link rel="stylesheet" href="adminnutrtion.css">
+</head>
+<body>
+
+<div class="header">
+  <h1>WELL-AXIS Nutrition Admin</h1>
+  <p>Centralized Meal Plan Control Panel</p>
+</div>
+
+<div class="dashboard">
+
+<div class="form-box">
+<h2>Update Student Meal Plan</h2>
+
+<label>Day</label>
+<select id="day">
+<option>Monday</option>
+<option>Tuesday</option>
+<option>Wednesday</option>
+<option>Thursday</option>
+<option>Friday</option>
+<option>Saturday</option>
+<option>Sunday</option>
+</select>
+
+<label>Breakfast</label>
+<input id="breakfast" placeholder="Enter breakfast">
+
+<label>Lunch</label>
+<input id="lunch" placeholder="Enter lunch">
+
+<label>Snacks</label>
+<input id="snacks" placeholder="Enter snacks">
+
+<label>Dinner</label>
+<input id="dinner" placeholder="Enter dinner">
+
+<button onclick="updateMeal()">Push Update to Students</button>
+
+<p id="status"></p>
+
+</div>
+
+<div class="preview-box">
+<h2>Live Student Nutrition Feed</h2>
+
+<table>
+<tr>
+<th>Day</th><th>Breakfast</th><th>Lunch</th><th>Snacks</th><th>Dinner</th>
+</tr>
+
+<tr><td>Monday</td><td>Dosa</td><td>Rice & Dal</td><td>Banana</td><td>Chapati</td></tr>
+<tr><td>Tuesday</td><td>Upma</td><td>Rajma</td><td>Sprouts</td><td>Veg Sagu</td></tr>
+<tr><td>Wednesday</td><td>Paratha</td><td>Sambar</td><td>Fruits</td><td>Paneer</td></tr>
+</table>
+
+</div>
+
+</div>
+
+<script>
+function updateMeal(){
+   document.getElementById("status").innerHTML =
+   "Meal Plan Successfully Synced to Student Dashboard";
+}
+</script>
+
+</body>
+</html>

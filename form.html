@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Support Form</title>
+    <link rel="stylesheet" href="mentalhealth.css">
+</head>
+
+<body>
+
+<form class="health-form" onsubmit="event.preventDefault(); submitForm();">
+
+    <h1>🧠 MENTAL HEALTH SUPPORT FORM</h1>
+    <h2>Personal Information</h2>
+    <div class="f">
+    <div class="f1">
+    <label for="name">First name</label><br>
+    <input type="text" id="fname" ><br>
+    <label for="dob">Date of Birth</label><br>
+    <input type="datetime" name="dob" id="dob"><br>
+    <label for="id">Student ID</label><br>
+    <input type="number" id="id" name="id"><br>
+    <h2>How are you feeling?</h2>
+<label><b>How would you describe your current emotional state?</b></label><br>
+<input class="r1" type="radio" name="e1" id="e1"> 
+<label for="e1">😊 Feeling good</label><br>
+<input class="r1" type="radio" name="e1" id="e2"> 
+<label for="e2">🙂 Mostly okay</label><br>
+<input class="r1" type="radio" name="e1" id="e3"> 
+<label for="e3">😐 Feeling neutral</label><br>
+<input class="r1" type="radio" name="e1" id="e4"> 
+<label for="e4">😔 Feeling low</label><br>
+<input class="r1" type="radio" name="e1" id="e5"> 
+<label for="e5">😫 Overwhelmed or stressed</label><br>
+<input class="r1" type="radio" name="e1" id="e6"> 
+<label for="e5">😢 Very upset or struggling</label><br>
+<label><b>How long have you been experiencing these issues?</b></label><br>
+<input class="r1" type="radio" name="i1" id="i1"> 
+<label for="i1">Less than 2 weeks</label><br>
+<input class="r1" type="radio" name="i1" id="i2"> 
+<label for="i2">2–6 weeks</label><br>
+<input class="r1" type="radio" name="i1" id="i3"> 
+<label for="i3">2–6 months</label><br>
+<input class="r1" type="radio" name="i1" id="i4"> 
+<label for="i4">6 months or longer</label><br>
+<input class="r1" type="radio" name="i1" id="i5"> 
+<label for="i5">Not sure</label><br>
+
+<label><b>What kind of help are you looking for?</b></label><br>
+<input class="r1" type="radio" name="hp1" id="hp1"> 
+<label for="hp1">I want someone to talk to</label><br>
+<input class="r1" type="radio" name="hp1" id="hp2"> 
+<label for="hp2">I need mental health tips or resources</label><br>
+<input class="r1" type="radio" name="hp1" id="hp3"> 
+<label for="hp3">I want help managing stress/anxiety</label><br>
+<input class="r1" type="radio" name="hp1" id="hp4"> 
+<label for="hp4">I need academic support guidance</label><br>
+<input class="r1" type="radio" name="hp1" id="hp5"> 
+<label for="hp5">I’m not sure, but I want support</label><br>
+<input class="r1" type="radio" name="hp1" id="hp6"> 
+<label for="hp6">It’s an emergency — I need urgent help</label><br>
+<b><label>Have you ever attempted self-harm or suicide in the past?</label></b><br>
+<input class="r1" type="radio" name="p1" id="p1"> 
+<label for="p1">Yes — within the last year</label><br>
+<input class="r1" type="radio" name="p1" id="p1"> 
+<label for="p1">Yes — more than a year ago</label><br>
+<input class="r1" type="radio" name="p1" id="p1"> 
+<label for="p1">No</label><br>
+  <h2>Mental Health & Medical History</h2>
+  <b><label>Have you previously received counseling, psychotherapy, or psychiatric care?</label></b><br>
+  <input class="r1" type="radio" name="m1" id="m1"> 
+<label for="m1">Yes — currently receiving</label><br>
+ <input class="r1" type="radio" name="m1" id="m2"> 
+<label for="m2">Yes — in the past (not currently)</label><br>
+ <input class="r1" type="radio" name="m1" id="m3"> 
+<label for="m3">No</label><br>
+<b><label>Are you currently under any other professional care <br> (medical, psychiatric, legal) related to these concerns?</label></b><br>
+<input class="r1" type="radio" name="f1" id="f1">
+<label for="f1">Yes — <b>Specify:</b> <input  class="r2" type="text"></label><br>
+<input class="r1" type="radio" name="f1" id="f2">
+<label for="f2">No</label><br>
+<h2>Impact & Functioning</h2>
+<b><label>Who do you normally turn to for support?</label></b><br>
+<input class="r1" type="checkbox" id="h1">
+<label for="h1">Family</label><br>
+<input class="r1" type="checkbox" id="h2">
+<label for="h2">Friend</label><br>
+<input class="r1" type="checkbox" id="h3">
+<label for="h3">Partner</label><br>
+<input class="r1" type="checkbox" id="h4">
+<label for="h4">Peer Support Group</label><br>
+<input class="r1" type="checkbox" id="h5">
+<label for="h5">No one / I feel alone</label><br>
+<label for="h5"> Others:</label>
+<input class="r2" type="text" id="h5"><br>
+<b><label for="work">On a scale of 1–10, how motivated are you to work on these issues?</label></b><br>
+<input type="number" id="work">
+<h2>Preferences and Logistics</h2>
+<b><label>How are these issues affecting your daily life? <i>(select all that apply)</i></label></b><br>
+<input class="r1" type="checkbox" id="j1">
+<label for="j1">One-on-one counseling (short-term)</label><br>
+<input class="r1" type="checkbox" id="j9">
+<label for="j9">I’m not sure — I would like guidance</label><br>
+<input class="r1" type="checkbox" id="j2">
+<label for="j2">Ongoing therapy (long-term)</label><br>
+<input class="r1" type="checkbox" id="j3">
+<label for="j3">Crisis or immediate assistance</label><br>
+<input class="r1" type="checkbox" id="j4">
+<label for="j4">Peer support group</label><br>
+<input class="r1" type="checkbox" id="j5">
+<label for="j5">Stress management workshops / resources</label><br>
+<input class="r1" type="checkbox" id="j6">
+<label for="j6">Referral to psychiatric services for medication evaluation</label><br>
+<input class="r1" type="checkbox" id="j7">
+<label for="j7">Academic adjustments / accommodations</label><br>
+<label for="j8">Others</label>
+<input class="r2" type="text" id="j8">
+    </div>
+    <div class="f2">
+    <label for="name">Last name</label> <br>
+    <input type="text" id="lname"><br>
+    <label for="gender">Gender</label>
+    <select name="gender" id="gender">
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+    <option value="Others">Others</option>
+    </select><br>
+    <label for="email">Email Address</label><br>
+    <input type="email" name="email" id="email"><br><br>
+    <label for="phone">Mobile number</label> <br>
+    <input type="number" name="phone" id="phone"><br><br>
+    <b><label> What are you currently experiencing?</label></b><br>
+<input class="r1" type="checkbox" id="c1">
+<label for="c1">Stress/academic pressure</label><br>
+<input class="r1" type="checkbox" id="c2">
+<label for="c2">Anxiety or constant worrying</label><br>
+<input class="r1" type="checkbox" id="c3">
+<label for="c3">Trouble sleeping</label><br>
+<input class="r1" type="checkbox" id="c4">
+<label for="c4">Lack of motivation</label><br>
+<input class="r1" type="checkbox" id="c5">
+<label for="c5">Overthinking</label><br>
+<input class="r1" type="checkbox" id="c6">
+<label for="c6">Feeling lonely or withdrawn</label><br>
+<input class="r1" type="checkbox" id="c7">
+<label for="c7">Emotional exhaustion</label><br>
+<input class="r1" type="checkbox" id="c8">
+<label for="c8">Something else</label><br>
+<input class="r1" type="checkbox" id="c9">
+<label for="c9">Relationship or family issues</label><br>
+    <b><label>How severe are these problems for you right now?</label></b><br>
+    <input class="r1" type="radio" name="s1" id="s1"> 
+<label for="s1">Mild (some trouble, manageable)</label><br>
+<input class="r1" type="radio" name="s1" id="s2"> 
+<label for="s2">Moderate (affects daily life)</label><br>
+<input class="r1" type="radio" name="s1" id="s3"> 
+<label for="s3">Severe (major difficulty functioning)</label><br>
+<input class="r1" type="radio" name="s1" id="s4"> 
+<label for="s4">Crisis / urgent (I feel unsafe or in danger)</label><br>
+<b><label>Have you had thoughts of harming yourself <br>or ending your life? <i>(Required — safety check)</i></label></b><br>
+<input class="r1" type="radio" name="l1" id="l4"> 
+<label for="l4">No</label><br>
+<input class="r1" type="radio" name="l1" id="l1"> 
+<label for="l2">Sometimes / Occasionally</label><br>
+<input class="r1" type="radio" name="l1" id="l2"> 
+<label for="l3">Often / Frequently</label><br>
+<input class="r1" type="radio" name="l1" id="l3"> 
+<label for="l4">I currently have active plans or intent</label><br>
+<b><label for="description">Is there anything specific you would like to share?</label></b><br>
+  <textarea id="description" name="description" rows="4" cols="50" placeholder="A short description of what you’re going through."></textarea><br><br><br>
+  <b><label>Do you have any diagnosed mental health conditions?</label></b><br>
+<input class="r1" type="radio" name="b1" id="b1"> 
+<label for="b1">Yes — <b>Specify:</b> <input  class="r2" type="text"></label><br>
+<input class="r1" type="radio" name="b1" id="b2">
+<label for="b2">No</label><br>
+<b><label>Do you have any physical health concerns, disabilities,<br> or chronic medical conditions we should know about?</label></b><br>
+<input class="r1" type="radio" name="d1" id="d1">
+<label for="d1">Yes — <b>Specify:</b> <input  class="r2" type="text"></label><br>
+<input class="r1" type="radio" name="d1" id="d2">
+<label for="d2">No</label><br><br><br><br><br>
+<b><label>How are these issues affecting your daily life?</label></b><br>
+<input class="r1" type="checkbox" id="g1">
+<label for="g1">Affecting academic performance / grades</label><br>
+<input class="r1" type="checkbox" id="g2">
+<label for="g2">Missing classes or assignments</label><br>
+<input class="r1" type="checkbox" id="g3">
+<label for="g3">Difficulty concentrating / studying</label><br>
+<input class="r1" type="checkbox" id="g">
+<label for="g4">Sleep affected</label><br>
+<input class="r1" type="checkbox" id="g5">
+<label for="g5">Appetite changes</label><br>
+<input class="r1" type="checkbox" id="g6">
+<label for="g6">Difficulty maintaining relationships</label><br>
+<input class="r1" type="checkbox" id="g7">
+<label for="g7">Attendance at social events decreased</label><br>
+<input class="r1" type="checkbox" id="g8">
+<label for="g8">Unable to perform usual daily tasks</label><br>
+<label for="g9">Others:</label>
+<input class="r2" type="text" id="g9"><br><br><br><br>
+<b><label>Preferred mode of counseling / contact?</b></label><br>
+<input class="r1" type="checkbox" id="k1">
+<label for="k1">In-person on campus</label><br>
+<input class="r1" type="checkbox" id="k2">
+<label for="k2">Video call (Zoom/Teams)</label><br>
+<input class="r1" type="checkbox" id="k3">
+<label for="k3">Phone call</label><br>
+<input class="r1" type="checkbox" id="k4">
+<label for="k4">Text or chat-based support</label><br>
+<input class="r1" type="checkbox" id="k5">
+<label for="k5">Email follow-up</label><br>
+<b><label>Days / Times you are available ?<i> (helps scheduling)</i></b></label><br>
+  <label><b>Weekdays</b></label><br>
+<input class="r1" type="checkbox" id="n1">
+<label for="n1">Morning</label>
+<input class="r1" type="checkbox" id="n2">
+<label for="n2">Afternoon</label>
+<input class="r1" type="checkbox" id="n3">
+<label for="n3">Evening</label><br>
+<label><b>Weekends</b></label><br>
+<input class="r1" type="checkbox" id="n4">
+<label for="n4">Morning</label>
+<input class="r1" type="checkbox" id="n4">
+<label for="n4">Afternoon</label>
+<input class="r1" type="checkbox" id="n4">
+<label for="n4">Evening</label>
+</div>   
+</div>
+  <h2>Safety and Emergency Contact</h2>
+  <label><b>If we determine this is an urgent situation, who can we contact if necessary?</b></label><br>
+  <label for="name1">Name</label>
+  <input class="r3" type="text" name="name1" id="name1"><br>
+  <label for="relationship">Relationship</label>
+  <input class="r3" type="text" name="relationship" id="relationship"><br>
+  <label for="phone">Phone</label>
+  <input class="r3" type="tel" name="phone" id="phone"><br>
+  <b><label>Would you like to remain anonymous for this request?</label></b><br>
+<input class="r1" type="radio" name="o1" id="o1"> 
+<label for="o1">Yes — keep my identity confidential (we will use a pseudonym)</label><br>
+<input class="r1" type="radio" name="o1" id="o2"> 
+<label for="o2">No — you may use my name/contact details to follow up</label><br>
+<b><label>If you are assessed as high risk, do you consent to the counseling team taking appropriate action <i> (including contacting emergency services or your emergency contact)</i>?</label></b><br>
+<input class="r1" type="radio" name="o3" id="o3"> 
+<label for="o3">Yes — I consent</label><br>
+<input class="r1" type="radio" name="o3" id="o4"> 
+<label for="o4">No — I do not consent</label><br>
+<h2>Privacy, Consent & Declarations</h2>
+<b><label>Privacy Notice</label></b><br>
+<input class="r1" type="checkbox" id="o5">
+<label for="o5">
+  Your responses are confidential and accessed only by qualified counseling staff. We will not share your personal information outside the counseling team without your consent, except in cases where we are legally required to do so (for instance, if you are at imminent risk of harming yourself or others).
+</label><br>
+<input class="r1" type="checkbox" id="o6">
+<label for="o6">
+  “I have read and understood the privacy notice and consent to my information being used for the purpose of providing mental health support.” 
+</label>
+<br><br>
+<center>
+<button class="btn" type="submit">Submit</button>
+</center>
+
+</form>
+
+<script src="form.js"></script>
+</body>
+</html>

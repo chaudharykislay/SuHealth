@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin – Fitness Planner</title>
+<link rel="stylesheet" href="adminfitnessupdate.css">
+</head>
+<body>
+
+<div class="header">
+  <h1>WELL-AXIS Fitness Admin</h1>
+  <p>Centralized Workout Schedule Controller</p>
+</div>
+
+<div class="dashboard">
+
+<div class="form-box">
+<h2>Update Student Workout Plan</h2>
+
+<label>Day</label>
+<select>
+<option>Monday</option>
+<option>Tuesday</option>
+<option>Wednesday</option>
+<option>Thursday</option>
+<option>Friday</option>
+<option>Saturday</option>
+<option>Sunday</option>
+</select>
+
+<label>Warm-Up Routine</label>
+<input placeholder="Dynamic warm-up">
+
+<label>Workout Routine</label>
+<input placeholder="e.g. Core Workout, Squats">
+
+<label>Repetition of Sets</label>
+<input placeholder="e.g. 20 reps × 4">
+
+<label>Exercise Interval</label>
+<input placeholder="e.g. 30 sec">
+
+<label>Cooldown Routine</label>
+<input placeholder="Static stretching">
+
+<button onclick="sync()">Push Workout to Students</button>
+<p id="status"></p>
+
+</div>
+
+<div class="preview-box">
+<h2>Live Student Fitness Feed</h2>
+
+<table>
+<tr>
+<th>Day</th><th>Warm-Up</th><th>Workout</th><th>Reps</th><th>Interval</th><th>Cooldown</th>
+</tr>
+
+<tr><td>Monday</td><td>Dynamic</td><td>Squats</td><td>20×6</td><td>30 sec</td><td>Static</td></tr>
+<tr><td>Tuesday</td><td>Dynamic</td><td>Cardio</td><td>25×5</td><td>30 sec</td><td>Static</td></tr>
+<tr><td>Wednesday</td><td>Dynamic</td><td>Core</td><td>20×4</td><td>40 sec</td><td>Static</td></tr>
+
+</table>
+
+</div>
+
+</div>
+
+<script>
+function sync(){
+document.getElementById("status").innerHTML="Workout Plan Synced to Student Dashboard";
+}
+</script>
+
+</body>
+</html>

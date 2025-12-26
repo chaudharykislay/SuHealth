@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin page</title>
+    <link rel="stylesheet" href="admin.css">
+     
+</head>
+<body>
+   <div class="Admin">
+    Admin : Manage Health Resource
+   </div>
+
+ <select id="resource">
+  <option>physical nutrition</option>
+  <option>mental ability</option>
+  <option>resourse</option>
+ </select>
+<select id="categoryInput">
+  <option>Mental Health</option>
+  <option>Physical Health</option>
+  <option>Nutrition</option>
+</select>
+<select id="description">
+  <option>Mental status</option>
+  <option>Physical status</option>
+  <option>Nutrition status</option>
+</select>
+
+<select id="statusInput">
+  <option value="Active">Active</option>
+  <option value="Inactive">Inactive</option>
+</select>
+<button id="saveBtn">Save Resource</button>
+
+<!-- Table -->
+<table id="resourceTable">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Category</th>
+      <th>Status</th>
+      <th>Description</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+<script src="admin1.js"></script>
+
+</body>
+</html>

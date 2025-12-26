@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wellness Hub – Sign Up</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+
+    <script>
+        function showStudentForm() {
+            document.getElementById("studentFields").style.display = "block";
+            document.getElementById("adminFields").style.display = "none";
+            document.getElementById("role").value = "student";
+        }
+
+        function showAdminForm() {
+            document.getElementById("studentFields").style.display = "none";
+            document.getElementById("adminFields").style.display = "block";
+            document.getElementById("role").value = "admin";
+        }
+
+        function calculateBMI(heightCm, weightKg) {
+            let heightM = heightCm / 100;
+            let bmi = (weightKg / (heightM * heightM)).toFixed(2);
+
+            let status = "Normal";
+            if (bmi < 18.5) status = "Underweight";
+            else if (bmi >= 25) status = "Overweight";
+
+            alert("Your BMI is " + bmi + " (" + status + ")");
+        }
+
+        function validateSignup() {
+
+            let role = document.getElementById("role").value;
+            let fname = document.getElementById("fname").value.trim();
+            let lname = document.getElementById("lname").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let phone = document.getElementById("phone").value.trim();
+
+            if (role === "") {
+                alert("Please select Student or Admin signup");
+                return false;
+            }
+
+            if (fname === "" || lname === "") {
+                alert("Please enter full name");
+                return false;
+            }
+
+            if (email === "") {
+                alert("Please enter email");
+                return false;
+            }
+
+            if (phone.length !== 10) {
+                alert("Please enter valid 10-digit phone number");
+                return false;
+            }
+
+            if (role === "student") {
+                let blood = document.getElementById("blood").value;
+                let height = document.getElementById("height").value;
+                let weight = document.getElementById("weight").value;
+
+                if (blood === "" || height === "" || weight === "") {
+                    alert("Please fill all student health details");
+                    return false;
+                }
+
+                // Calculate BMI for student
+                calculateBMI(height, weight);
+            }
+
+            if (role === "admin") {
+                let adminId = document.getElementById("adminId").value.trim();
+                let dept = document.getElementById("dept").value.trim();
+
+                if (adminId === "" || dept === "") {
+                    alert("Please fill all admin details");
+                    return false;
+                }
+            }
+
+            alert("Signup successful! Redirecting to login page...");
+            window.location.href = "login.html";
+            return false;
+        }
+    </script>
+</head>
+
+<body>
+
+<div class="login-container">
+
+    <h1>📝 Sign Up – Wellness Hub</h1>
+
+    <button class="student-btn" type="button" onclick="showStudentForm()">Sign up as Student</button>
+    <button class="admin-btn" type="button" onclick="showAdminForm()">Sign up as Admin</button>
+
+    <form onsubmit="return validateSignup()">
+
+        <input type="hidden" id="role">
+
+        <label>First Name</label>
+        <input type="text" id="fname">
+
+        <label>Last Name</label>
+        <input type="text" id="lname">
+
+        <label>Email</label>
+        <input type="email" id="email">
+
+        <label>Mobile Number</label>
+        <input type="tel" id="phone">
+
+        <!-- STUDENT HEALTH DETAILS -->
+        <div id="studentFields" style="display:none;">
+            <h3>🩺 Student Health Details</h3>
+
+            <label>Date of Birth</label>
+            <input type="date" id="dob">
+
+            <label>Gender</label>
+            <select id="gender">
+                <option value="">Select</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+            </select>
+
+            <label>Blood Group</label>
+            <select id="blood">
+                <option value="">Select</option>
+                <option>A+</option><option>A-</option>
+                <option>B+</option><option>B-</option>
+                <option>O+</option><option>O-</option>
+                <option>AB+</option><option>AB-</option>
+            </select>
+
+            <label>Height (cm)</label>
+            <input type="number" id="height">
+
+            <label>Weight (kg)</label>
+            <input type="number" id="weight">
+
+            <label>Known Allergies</label>
+            <input type="text" id="allergy">
+
+            <label>Existing Medical Conditions</label>
+            <input type="text" id="condition">
+        </div>
+
+        <!-- ADMIN DETAILS -->
+        <div id="adminFields" style="display:none;">
+            <h3>🛡️ Admin Details</h3>
+
+            <label>Admin ID</label>
+            <input type="text" id="adminId">
+
+            <label>Department</label>
+            <input type="text" id="dept">
+        </div>
+
+        <button type="submit">Create Account</button>
+    </form>
+
+    <p class="hint">
+        Already have an account?
+        <a href="login.html">Login</a>
+    </p>
+
+</div>
+
+</body>
+</html>

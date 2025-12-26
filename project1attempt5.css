@@ -1,3 +1,4 @@
+
 body{
     margin: 0;
     background-image: url('photo22.png');
@@ -8,6 +9,7 @@ body{
     width: 100%;
 }
 
+    
 header{
     display: flex;
     flex-wrap: wrap;
@@ -18,15 +20,20 @@ header{
     padding: 1% 0.5%;
     color: aliceblue;
     width: 100%;
+    
 }
+
 nav a{
     margin: 7px;
     padding: 15px 20px;
     text-decoration: none;
     font-size: 18px;
-    color: rgba(0, 0, 0, 0.982);
+    color: rgba(126, 1, 1, 0.982);
     font-weight: bold;
+    
+    
 }
+
 .login{
     background-color: rgb(49, 144, 146);
     /* padding: 0; */
@@ -47,6 +54,7 @@ a:hover{
         color: #d6a62c;
         background-color: dimgrey;
         border-radius: 40px;
+        
     }
 a:color:active{
         color: #1e6f46;
@@ -64,9 +72,14 @@ a:color:active{
     grid-template-rows: 1fr;
     font-style: italic;
     color: rgb(2, 2, 80);
-    padding: 80px 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 80px;
+    padding-bottom: 30px;
      /* margin: 80px 0px; */
+     
 } 
+
 .p2{
     display: flex;
     flex-wrap: wrap;
@@ -121,4 +134,70 @@ a:color:active{
 .fitname{
     
     margin: 0% 1%;
+}
+.ourfunction{
+    margin: 1%;
+}
+.funhead{
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(19, 19, 136);
+    transition: transform 0.3s ease, 
+                background-color 0.3s ease, 
+                box-shadow 0.3s ease;
+
+    cursor: pointer;
+    
+    
+}
+.fun1title,.fun2title,.fun3title{
+    font-weight: bold;
+    text-decoration: dotted;
+    transition: transform 0.3s ease, 
+                background-color 0.3s ease, 
+                box-shadow 0.3s ease;
+
+    cursor: pointer;
+     margin: 1%;
+    font-size: 35px;
+    font-style: italic;
+   
+}
+.fun1about,.fun2about,.fun3about{
+    margin: 1%;
+    font-size: 25px;
+    font-style: italic;
+    
+} 
+ .fun1body,.fun2body,.fun3body{
+    margin: 1%;
+    font-size: 25px;
+    font-style: italic;
+    
+}
+
+/* .funhead,.fun1title,.fun2title,.fun3title,.fun1about,.fun2about,.fun3about,.fun1body,.fun2body,.fun3body{
+      transition: transform 0.3s ease, 
+                background-color 0.3s ease, 
+                box-shadow 0.3s ease;
+
+    cursor: pointer;
+    margin: 1%;
+    font-size: 25px;
+    font-style: italic;
+}*/
+.funhead :hover,.fun1title :hover,.fun2title :hover,.fun3title :hover{
+    transform: scale(1.01);
+} 
+.fit1,.fit2,.fit3{
+    padding: 5px;
+    margin: 15px;
+     transition: transform 0.3s ease, 
+                background-color 0.3s ease, 
+                box-shadow 0.3s ease;
+
+    cursor: pointer;
+}
+.fit1 :hover,.fit2 :hover,.fit3 :hover{
+   transform: scale(1.1);
 }

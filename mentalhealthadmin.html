@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin – Mental Health Dashboard</title>
+    <link rel="stylesheet" href="mentalhealth.css">
+</head>
+
+<body>
+
+    <h1>🧠 Mental Health Admin Panel</h1>
+
+    <!-- ================= DAILY TIP & QUOTE ================= -->
+
+    <div class="box">
+
+        <div class="tip-box">
+            <b>✨ Today’s Self-care Tip</b><br><br>
+            <span>Tip will load here...</span><br><br>
+            <input type="text" id="tip-boc" placeholder="Enter new tip">
+            <button onclick="AddTip()">Add Tip</button>
+            <button onclick="EditTip(this)">Edit Tip</button>
+        </div>
+
+        <div class="Motivation-box">
+            <b>🌱 Daily Quote</b><br><br>
+            <span>Quote will load here...</span><br><br>
+            <input type="text" id="Motivation-boc" placeholder="Enter new quote">
+            <button onclick="AddQuote()">Add Quote</button>
+            <button onclick="EditQuote(this)">Edit Quote</button>
+        </div>
+
+    </div>
+
+    <!-- ================= ADD RESOURCE ================= -->
+
+    <h2>Add / Edit Resource</h2>
+
+    <div class="admin-inputs">
+        <input type="text" id="res-title" placeholder="Resource title">
+        <input type="text" id="res-description" placeholder="Resource description">
+        <input type="text" id="res-link" placeholder="Resource link">
+        <input type="file" id="res-img" accept="image/*">
+        <button onclick="addResource()">Save Resource</button>
+    </div>
+
+    <!-- ================= RESOURCES LIST ================= -->
+
+    <h2>Resources</h2>
+
+    <!-- JS will inject resources here -->
+    <div class="resources" id="resourceContainer"></div>
+
+    <!-- ================= STUDENT FORM SUBMISSIONS ================= -->
+
+    <h2>📋 Student Counseling Requests</h2>
+
+    <!-- JS will inject submissions here -->
+    <div id="submissionContainer"></div>
+    <!-- ================= JS ================= -->
+    <script src="admin.js"></script>
+
+</body>
+</html>

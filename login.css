@@ -1,61 +1,170 @@
-body{
+/* ===== GLOBAL ===== */
+body {
     background-image: url(pramod-tiwari-w09m4VYrAK4-unsplash.jpg);
-    background-repeat: no-repeat;  
+    background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     margin: 0;
     padding: 0;
-}
-.container{
-    width: 385px;
-    height: 580px;
-    border-radius: 0px;
-    background-color: azure;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-    margin-top: 100px;
-    margin-left: 580px;
-    text-align: center;
-}
-.container h1{
-  text-decoration: underline;
-}
-.container img{
-   width: 385px;
-   height: 234px;  
-}
-.container input{
-  width: 200px;
-  height: 25px;
-  padding:6px 6px ;
-  border-radius: 3px;
-  outline: none;
-  font-size: large;
-  border-color: wheat;
-}
-.container strong{
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: large;
-
-}
-.container button{
-  width: 320px;
-  height: 40px;
-  font-size: 150%;
-  font-weight: bold;
-  background-color: blue;
-  color: white;
-  border-radius: 4px;
-  border-color: blue;
-  cursor: pointer;
-  margin-top: 12px;
     font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.co span{
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: small;
+
+/* ===== LOGIN CONTAINER ===== */
+.login-container {
+    width: 385px;
+    background-color: rgba(240, 255, 255, 0.95);
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    padding: 25px;
 }
 
-  
+/* ===== HEADING ===== */
+.login-container h1 {
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
 
+/* ===== LABELS ===== */
+.login-container label {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* ===== INPUTS ===== */
+.login-container input {
+    width: 100%;
+    height: 38px;
+    padding: 6px 10px;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+}
+
+/* ===== BUTTONS ===== */
+.login-container button {
+    width: 100%;
+    height: 42px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+    color: white;
+}
+
+/* Student button */
+.student-btn {
+    background-color: #4CAF50;
+}
+.student-btn:hover {
+    background-color: #43a047;
+}
+
+/* Admin button */
+.admin-btn {
+    background-color: #1e88e5;
+}
+.admin-btn:hover {
+    background-color: #1565c0;
+}
+
+/* ===== FOOTER TEXT ===== */
+.hint {
+    margin-top: 15px;
+    font-size: 13px;
+    color: #555;
+}
+/* ================= SIGNUP IMPROVEMENTS ================= */
+
+/* Make signup container wider */
+.login-container {
+    width: 480px;   /* was ~385px */
+}
+
+/* Improve form spacing */
+.login-container form {
+    margin-top: 20px;
+}
+
+/* Inputs spacing */
+.login-container input,
+.login-container select {
+    margin-bottom: 12px;
+}
+
+/* Section headings inside signup */
+.login-container h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #4CAF50;
+    color: #333;
+    text-align: left;
+}
+
+/* Student/Admin field blocks */
+#studentFields,
+#adminFields {
+    background-color: #f4f9ff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+    border: 1px solid #d0e3ff;
+}
+
+/* Make role buttons look grouped */
+.login-container .student-btn,
+.login-container .admin-btn {
+    margin-bottom: 10px;
+}
+
+/* Better submit button separation */
+.login-container button[type="submit"] {
+    margin-top: 20px;
+    background-color: #673ab7;
+}
+
+.login-container button[type="submit"]:hover {
+    background-color: #5e35b1;
+}
+/* ===== FIX INPUT OVERFLOW INSIDE SIGNUP BOX ===== */
+
+/* Force inputs & selects to stay inside the box */
+.login-container input,
+.login-container select {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Ensure student & admin sections do not overflow */
+#studentFields,
+#adminFields {
+    box-sizing: border-box;
+}
+
+/* Prevent padding from pushing content outside */
+#studentFields *,
+#adminFields * {
+    box-sizing: border-box;
+}
+
+/* Responsive tweak for small screens */
+@media (max-width: 600px) {
+    .login-container {
+        width: 92%;
+    }
+    .login-container h1 {
+        font-size: 20px;
+    }
+}

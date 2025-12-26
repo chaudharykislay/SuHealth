@@ -2,25 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Wellness Hub Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login</title>
     <link rel="stylesheet" href="login.css">
-    
+
+    <script>
+        function studentLogin() {
+            let user = document.getElementById("user").value;
+            let pass = document.getElementById("pass").value;
+
+            if (user === "Student" && pass === "Student") {
+                localStorage.setItem("loginRole", "student");
+                window.location.href = "studentresources.html";
+            } else {
+                alert("Invalid Student credentials");
+            }
+        }
+
+        function adminLogin() {
+            let user = document.getElementById("user").value;
+            let pass = document.getElementById("pass").value;
+
+            if (user === "Admin" && pass === "Admin") {
+                localStorage.setItem("loginRole", "admin");
+                window.location.href = "Adminresourcesupdate.html";
+            } else {
+                alert("Invalid Admin credentials");
+            }
+        }
+    </script>
 </head>
+
 <body>
-    <section class="container">
-        <img src="i2.png" alt="i2"> 
-        <form>
-      <h1>Student Login </h1>
-      <strong>Username:</strong>
-     <input type="text" name="user"><br><br>
-      <strong>Password:</strong>
-      <input type="password" name="pass">
-      </form>
-      <br>
-      <a href="project1attempt5.html"> <button class="btn">Continue</button></a>
-      <br><br>
-      <span>New to Wellnes hub? <a href=Signup1.html>Sign up</a></span>
-    </section>
+
+<div class="login-container">
+    <h1>🧠 Wellness Hub Login</h1>
+
+    <label>Username</label>
+    <input type="text" id="user" placeholder="Enter username">
+
+    <label>Password</label>
+    <input type="password" id="pass" placeholder="Enter password">
+
+    <button class="student-btn" onclick="studentLogin()">Login as Student</button>
+    <button class="admin-btn" onclick="adminLogin()">Login as Admin</button>
+
+    <p class="hint">
+        Student → Student / Student <br>
+        Admin → Admin / Admin
+    </p>
+</div>
+
 </body>
 </html>
+
