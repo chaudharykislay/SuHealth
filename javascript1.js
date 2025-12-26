@@ -6,14 +6,14 @@ document.querySelector("form").addEventListener("submit", function(event) {
     let s2value = document.getElementById("s2").value;
     
     let link ;
-    if(s1value=="Nutrition🥗"){
+    if(s1value=="Nutritions🥗"){
         link="Nutition1.html"
     }
-    else if(s1value=="Fitness💪🏼"){
+    else if(s1value=="Fitnes💪🏼"){
         link="FITNESS.html"
     }
-    else if(s1value=="Mentalhealth🧠"){
-         if(s1value=="Mentalhealth🧠" && s2value=="Mentalhealthform"){
+    else if(s1value=="Mentalhealths🧠"){
+         if(s1value=="Mentalhealths🧠" && s2value=="Mentalhealthforms"){
         link="form.html";
     }else{
         link="studentmentalhealth.html"
