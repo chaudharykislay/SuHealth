@@ -15,11 +15,17 @@ document.querySelector("form").addEventListener("submit", function(event) {
     else if(s1value=="Mentalhealths🧠"){
          if(s1value=="Mentalhealths🧠" && s2value=="Mentalhealthforms"){
         link="form.html";
-    }else{
+    }
+
+    else{
         link="studentmentalhealth.html"
     }
-    
+}
+    else if(s1value=="Programs"){
+        link="studentprogran.html"  
+
     }
+    
     else{
         link ;
     }

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin – Program Control</title>
+<link rel="stylesheet" href="adminprogramupdate.css">
+</head>
+<body>
+
+<div class="header">
+  <h1>WELL-AXIS Program Admin</h1>
+  <p>Institutional Health Program Management</p>
+</div>
+
+<div class="container">
+
+<div class="form-box">
+<h2>Create / Update Program</h2>
+
+<label>Program Title</label>
+<input placeholder="e.g. Mental Wellness Campaign">
+
+<label>Program Category</label>
+<select>
+  <option>Nutrition</option>
+  <option>Fitness</option>
+  <option>Mental Health</option>
+  <option>Yoga</option>
+</select>
+
+<label>Program Description</label>
+<textarea placeholder="Enter program details"></textarea>
+
+<label>Upload Program Poster</label>
+<input type="file">
+
+<button onclick="publish()">Publish to Student Portal</button>
+<p id="status"></p>
+</div>
+
+<div class="preview-box">
+<h2>Live Student Program Feed</h2>
+
+<div class="preview-card">
+<img src="photo32.webp">
+<h3>Healthy Nutrition Drive</h3>
+<p>Balanced diet and healthy eating habits program.</p>
+</div>
+
+<div class="preview-card">
+<img src="photo29.avif">
+<h3>Daily Fitness Program</h3>
+<p>Cardio, strength and endurance training.</p>
+</div>
+
+<div class="preview-card">
+<img src="photo30.jpg">
+<h3>Mental Wellness Campaign</h3>
+<p>Stress relief and counselling sessions.</p>
+</div>
+
+</div>
+
+</div>
+
+<script>
+function publish(){
+document.getElementById("status").innerHTML =
+"Program successfully published to Student Program Board";
+}
+</script>
+
+</body>
+</html>

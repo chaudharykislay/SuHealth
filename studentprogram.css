@@ -1,0 +1,48 @@
+body{
+  margin:0;
+  font-family:Arial;
+  background:#f4f7ff;
+}
+
+.header{
+  background:linear-gradient(to right,#2e7d32,#3f51b5,#9c27b0);
+  color:white;
+  text-align:center;
+  padding:30px;
+}
+
+.program-grid{
+  display:grid;
+  grid-template-columns: repeat(2,1fr);
+  gap:30px;
+  padding:40px;
+}
+
+.program-card{
+  background:white;
+  border-radius:15px;
+  overflow:hidden;
+  box-shadow:0 0 20px rgba(0,0,0,0.15);
+  transition:0.3s;
+}
+
+.program-card:hover{
+  transform:scale(1.03);
+}
+
+.program-card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+}
+
+.program-card h2{
+  color:#2e7d32;
+  margin:15px;
+}
+
+.program-card p{
+  margin:15px;
+  color:#555;
+  line-height:1.5;
+}
