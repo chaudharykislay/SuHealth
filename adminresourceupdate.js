@@ -15,6 +15,9 @@ document.querySelector("form").addEventListener("submit", function(event) {
     else if(s1value=="Mentalhealth🧠"){
         link="mentalhealthadmin.html"
     }
+    else if(s1value=="Programs"){
+        link="adminprogramupdate.html"
+    }
     else{
         link ="adminresourcesupdate.html";
     }
